@@ -2,6 +2,39 @@
 
 主要汇总自己在面试中遇到的问题和网络上收集到的问题。
 
+### HTML/CSS部分
+
+#### 1.什么是盒子模型？
+在网页中，一个元素占有空间的大小由几个部分构成，其中包括元素的内容（content），元素的内边距（padding），元素的边框（border），元素的外边距（margin）四个部分。这四个部分占有的空间中，有的部分可以显示相应的内容，而有的部分只用来分隔相邻的区域或区域。4个部分一起构成了css中元素的盒模型。
+
+#### 2.行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？
+- 行内元素：a、b、span、img、input、strong、select、label、em、button、textarea
+- 块级元素：div、ul、li、dl、dt、dd、p、h1-h6、blockquote
+- 空元素：即系没有内容的HTML元素，例如：br、meta、hr、link、input、img
+
+#### 3.CSS实现垂直水平居中
+实现方法有很多种，以下是其中一种实现：
+
+HTML结构：
+```html
+<div class="wrapper">
+     <div class="content"></div>
+</div>
+```
+CSS部分：
+```css
+.wrapper{position:relative;}
+.content{
+	background-color:#6699FF;
+	width:200px;
+	height:200px;
+	position: absolute;        //父元素需要相对定位
+	top: 50%;
+	left: 50%;
+	margin-top:-100px ;   //二分之一的height，width
+	margin-left: -100px;
+}
+```
 ### 编程题
 1. 请使用2种以上的方法给array对象增加一个方法uniqO。用于把数组内容去重。[ =>解答](https://github.com/nummy/frontend-interview/blob/master/solutions/1.md)
 2. 数组快速排序 [=>解答](https://github.com/nummy/frontend-interview/blob/master/solutions/2.md)
